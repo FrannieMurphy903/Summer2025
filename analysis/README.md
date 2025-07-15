@@ -1,1 +1,1 @@
-
+This folder contains the statistical analyses performed to determine which parameters should be as thresholds in the classification process in the program and information on the statistical distribution of these parameters between budded and unbudded cells. This information can be found in a series of violin plots available in this folder, each of which has been labeled with the parameter being analyzed. 
