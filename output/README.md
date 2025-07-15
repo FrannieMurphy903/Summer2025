@@ -1,1 +1,1 @@
-
+This folder contains the results the program produced when run on the images in the data file within the excel file titled cell_counts. This folder also contains the analysis of this data used to construct a classification table that can be found in the figure created from this project. 
