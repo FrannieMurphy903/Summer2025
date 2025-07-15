@@ -1,1 +1,1 @@
-
+This folder contains a directory with all of the images used in this project and a spreadsheet containing a series of measurements across a collection of parameters measured for each of the cells analyzed. 
