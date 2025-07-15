@@ -1,0 +1,53 @@
+
+```{r}
+circ_data <- data.frame(circularity)
+```
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+circ_plot <- ggplot(circ_data, aes(x = Bud_status, y = Circularity)) + geom_violin(fill = "Blue") + ggtitle("Circularity for budded vs unbudded cells")
+```
+
+```{r}
+circ_plot
+```
+
+```{r}
+area_data <- data.frame(area)
+```
+
+```{r}
+area_plot <- ggplot(area_data, aes(x = Bud_status, y = Area)) + geom_violin(fill = "Blue") + ggtitle("Area for budded vs unbudded cells")
+```
+
+```{r}
+area_plot
+```
+
+
+```{r}
+ar_data <- data.frame(ar)
+```
+
+```{r}
+ar_plot <- ggplot(ar_data, aes(x = Bud_status, y = Aspect_ratio)) + geom_violin(fill = "Blue") + ggtitle("Aspect ratio for budded vs unbudded cells")
+```
+
+```{r}
+ar_plot
+```
+
+```{r}
+perim_data <- data.frame(pm)
+```
+
+```{r}
+perim_plot <- ggplot(perim_data, aes(x = Bud_status, y = Perimeter)) + geom_violin(fill = "Blue") + ggtitle("Perimeter for budded vs unbudded cells")
+```
+
+```{r}
+perim_plot
+```
