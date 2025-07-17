@@ -1,0 +1,103 @@
+
+```{r}
+circ_data <- data.frame(circularity)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(hrbrthemes)
+library(viridis)
+```
+
+```{r}
+sample_size = circ_data %>% group_by(Bud_status) %>% summarize(num=n())
+
+circ_data %>%
+  left_join(sample_size) %>%
+  mutate(myaxis = paste0(Bud_status, "\n", "n=", num)) %>%
+  ggplot( aes(x=myaxis, y=Circularity)) +
+    geom_violin(color = "black", fill = "blue") +
+    geom_boxplot(width=0.1, color="blue", fill = "blue") +
+    scale_fill_viridis(discrete = TRUE) +
+    theme_ipsum() +
+    theme(
+      legend.position="none",
+      plot.title = element_text(size=11)
+    ) +
+    ggtitle("Circularity for budded vs unbudded cells") +
+    xlab("")
+```
+
+
+```{r}
+area_data <- data.frame(area)
+```
+
+```{r}
+sample_size = area_data %>% group_by(Bud_status) %>% summarize(num=n())
+
+area_data %>%
+  left_join(sample_size) %>%
+  mutate(myaxis = paste0(Bud_status, "\n", "n=", num)) %>%
+  ggplot( aes(x=myaxis, y=Area)) +
+    geom_violin(color = "black", fill = "blue") +
+    geom_boxplot(width = 0.01, color="blue", fill = "blue") +
+    scale_fill_viridis(discrete = TRUE) +
+    theme_ipsum() +
+    theme(
+      legend.position="none",
+      plot.title = element_text(size=11)
+    ) +
+    ggtitle("Area for budded vs unbudded cells") +
+    xlab("")
+```
+
+
+
+```{r}
+ar_data <- data.frame(ar)
+```
+
+```{r}
+sample_size = area_data %>% group_by(Bud_status) %>% summarize(num=n())
+
+ar_data %>%
+  left_join(sample_size) %>%
+  mutate(myaxis = paste0(Bud_status, "\n", "n=", num)) %>%
+  ggplot( aes(x=myaxis, y=Aspect_ratio)) +
+    geom_violin(color = "black", fill = "blue") +
+    geom_boxplot(width = 0.01, color="blue", fill = "blue") +
+    scale_fill_viridis(discrete = TRUE) +
+    theme_ipsum() +
+    theme(
+      legend.position="none",
+      plot.title = element_text(size=11)
+    ) +
+    ggtitle("Aspect ratio for budded vs unbudded cells") +
+    xlab("")
+```
+
+
+```{r}
+perim_data <- data.frame(pm)
+```
+
+```{r}
+sample_size = area_data %>% group_by(Bud_status) %>% summarize(num=n())
+
+perim_data %>%
+  left_join(sample_size) %>%
+  mutate(myaxis = paste0(Bud_status, "\n", "n=", num)) %>%
+  ggplot( aes(x=myaxis, y=Perimeter)) +
+    geom_violin(color = "black", fill = "blue") +
+    geom_boxplot(width = 0.01, color="blue", fill = "blue") +
+    scale_fill_viridis(discrete = TRUE) +
+    theme_ipsum() +
+    theme(
+      legend.position="none",
+      plot.title = element_text(size=11)
+    ) +
+    ggtitle("Perimeter for budded vs unbudded cells") +
+    xlab("")
+```
